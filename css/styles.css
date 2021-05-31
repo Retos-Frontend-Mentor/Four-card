@@ -18,3 +18,129 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 1440px;
+  }
+}
+.main__header {
+  text-align: center;
+  padding: 50px 10px;
+  color: var(--text);
+}
+
+@media screen and (min-width: 768px) {
+  .main__header {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.main__title {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--bold-text);
+}
+@media screen and (min-width: 768px) {
+  .main__title {
+    font-size: 2.4rem;
+  }
+}
+
+.cards {
+  display: grid;
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .cards {
+    justify-content: center;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 250px);
+    gap: 30px;
+  }
+}
+.card {
+  border-radius: 10px;
+  padding: 25px;
+  position: relative;
+  height: 200px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px #83a6d288;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    margin-bottom: 0;
+  }
+  .card:first-child,
+  .card:last-child {
+    margin-top: 150px;
+  }
+  .card:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.card__cyan::before {
+  background-color: var(--Cyan);
+}
+
+.card__red::before {
+  background-color: var(--Red);
+}
+
+.card__orange::before {
+  background-color: var(--Orange);
+}
+
+.card__blue::before {
+  background-color: var(--Blue);
+}
+
+.card__title {
+  margin: 0;
+}
+
+.card__description {
+  margin: 0;
+  color: var(--light-text);
+}
+
+.card:first-child::after {
+  --icon: url(../images/icon-supervisor.svg);
+  --border-color: var(--cyan);
+}
+
+.card:nth-child(2)::after {
+  --icon: url(../images/icon-team-builder.svg);
+}
+
+.card:nth-child(3)::after {
+  --icon: url(../images/icon-karma.svg);
+}
+
+.card:last-child::after {
+  --icon: url(../images/icon-calculator.svg);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background-image: var(--icon);
+  background-repeat: no-repeat;
+  background-position: 90% bottom;
+}
