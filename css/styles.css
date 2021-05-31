@@ -1,0 +1,20 @@
+/* my styles */
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Light-Gray: hsl(0, 0%, 98%);
+  --body: #fafafafa;
+  --text: #aaabb3;
+  --bold-text: #4f4d5e;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--body);
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
